@@ -1,0 +1,180 @@
+/* FONT LINK */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* VARIABLES */
+:root{
+    --dark-color: hsl(252, 30%, 17%);
+    --light-color: hsl(255, 31%, 95%);
+    --gray-color: hsl(252, 15%, 45%);
+    --primary-color: hsl(252, 75%, 60%);
+    --white-color: hsl(252, 30%, 100%);
+    --black-color: hsl(252, 30%, 10%);
+/* 
+    --dark-color: hsl(252, 42%, 95%);
+    --light-color: hsl(255, 72%, 13%);
+    --gray-color: hsl(252, 15%, 45%);
+    --primary-color: hsl(252, 89%, 11%);
+    --secondary-color: hsl(250, 75%, 2%);
+    --success-color: hsl(120, 95%, 65%);
+    --danger-color: hsl(0,95%,65%);
+    --white-color: hsl(252, 30%, 100%);
+    --black-color: hsl(252, 30%, 10%); */
+}
+
+
+
+/* GENERAL STYLES */
+*, *::before, *::after{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   border: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-color);
+    background: var(--light-color);
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    gap: 1rem;
+}
+.container .bar{
+    background-color: var(--white-color);
+    height: 100vh;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+.container .bar .logo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.container .bar .logo h1{
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    color: var(--light-color);
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+.container .bar .logo > div p{
+    font-weight: 600;
+}
+.bar .search-box{
+    background-color: var(--gray-color);
+    border-radius: 12px;
+    display: flex;
+    margin-top: 0.7rem;
+    padding: 0.7rem 1rem;
+    justify-content: space-around;
+}
+.bar .search-box i{
+    font-size: 1.2rem;
+    color: var(--white-color);
+}
+.bar .search-box input{
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    background: inherit;
+    /* width: 100%; */
+}
+.collapse{
+    color: var(--white-color);
+    position: absolute;
+    top: 0.6rem;
+    right: -.4rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+/* MENU */
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.menu-item{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+.menu-item i{
+    font-size: 1.5rem;
+}
+.menu-item h5{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 2rem;
+    line-height: 3rem;
+    position: fixed;
+    bottom: 20px;
+}
+footer .change-display{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+.toggle{
+    width: 2rem;
+    height: 1rem;
+    border-radius: 20px;
+    background: var(--gray-color);
+    padding: 0 0.1rem;
+    cursor: pointer;
+}
+.toggle span{
+    width: 0.9rem;
+    display: block;
+    height: 1rem;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* COLLAPES */
+.container.collapses{
+    display: grid;
+    grid-template-columns: 6vw auto;
+    gap: 0.5rem;
+}
+
+.container.collapses .search-box input{
+    display: none;
+    /* padding: 0.5rem; */
+}
+.container.collapses .menu .menu-item h5{
+    display: none;
+}
+.container.collapses .change-display{
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 12px;
+}
+.container.collapses h5,
+.container.collapses .change-display i,
+.container.collapses .logo >div {
+    display: none;
+}
+
+main{
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+}
