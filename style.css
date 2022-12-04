@@ -47,7 +47,7 @@ body{
 }
 .container .bar{
     background-color: var(--white-color);
-    height: 100vh;
+    height: 300%;
     padding: 1rem 0.5rem;
     position: relative;
 }
@@ -154,7 +154,6 @@ footer .change-display{
     grid-template-columns: 5rem auto;
     gap: 0.5rem;
 }
-
 .container.collapses .search-box input{
     display: none;
     /* padding: 0.5rem; */
