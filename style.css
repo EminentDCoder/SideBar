@@ -121,7 +121,7 @@ body{
 footer{
     margin-top: 2rem;
     line-height: 3rem;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
 }
 footer .change-display{
@@ -177,8 +177,4 @@ main{
     display: grid;
     place-items: center;
     font-size: 3rem;
-}
-
-@media screen and (max-width: 1100px ) {
-
 }
